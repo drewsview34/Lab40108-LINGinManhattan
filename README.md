@@ -7,8 +7,12 @@ Developer: Andrew Hinojosa
 Collaborator: ???
 Contributors: ???
 
-
 Actual Time to complete: ???
+
+## Summary
+This is an app that allows you to query location information in Manhattan.
+
+## Step By Step Directions ("Happy Path")
 
 * User must create a new project in Visual Studio. 
 * User must push project to Github.
@@ -21,8 +25,6 @@ Purpose of the program to utilize a JSON file that contains a data set of locati
 
 To Run the program, user must click the start button (Green arrow) in Visual Studio.
 
-Here is a visual of what the program looks like.
-
-Successful Output
+## Visual Output 
 
 ![Lab40108](???)
