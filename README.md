@@ -26,4 +26,4 @@ To run the program, user must click the start button (Green arrow) in Visual Stu
 
 ## Visual Output 
 
-![Lab40108](???)
+![Lab40108](https://github.com/drewsview34/Lab40108-LINQInManhattan/blob/master/Assets/manhattanVisual.PNG)
