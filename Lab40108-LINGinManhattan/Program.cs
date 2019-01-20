@@ -29,14 +29,14 @@ namespace Lab40108_LINGinManhattan
         /// </summary>
         static void ConvertJson()
         {
-            string path = "../../data.json";
-            string filePathText = "";
+            string location = "../../data.json";
+            string fileLocation = "";
 
             try
             {
-                using (StreamReader sr = File.OpenText(path))
+                using (StreamReader sr = File.OpenText(location))
                 {
-                    filePathText = sr.ReadToEnd();
+                    fileLocation = sr.ReadToEnd();
                 }
             }
             catch (Exception)
@@ -48,15 +48,15 @@ namespace Lab40108_LINGinManhattan
             ///<summary>
             /// DESIRIALIZATION
             /// </summary>
-            var convertedJson = JsonConvert.DeserializeObject<FeatureCollection>(filePathText);
+            var convertedJson = JsonConvert.DeserializeObject<FeatureCollection>(fileLocation);
 
             ///<summary>
             /// Prints ALL neighborhoods in Feature Collection
             /// </summary>
-            var neighborhoodsQuery = convertedJson.Features.Select(x => x.Properties.Neighborhood);
+            var queryNeighborhoods = convertedJson.Features.Select(x => x.Properties.Neighborhood);
 
-            Console.WriteLine("-------------------------------Print Out Of All Neighborhoods In Manhattan------------------------------------------");
-            foreach (var hood in neighborhoodsQuery)
+            Console.WriteLine("PRINT OUT OF ALL NEIGHBORHOODS IN MANHATTAN");
+            foreach (var hood in queryNeighborhoods)
             {
                 Console.WriteLine(hood);
             }
@@ -65,39 +65,39 @@ namespace Lab40108_LINGinManhattan
             /// Prints out all valid neighborhoods
             /// </summary>
 
-            var validateNeighborhoods = from hoods in neighborhoodsQuery
+            var verifyNeighborhoods = from hoods in queryNeighborhoods
                                         where hoods.Length > 0
                                         select hoods;
 
-            Console.WriteLine("-------------------------------Validated Manhattan Neighborhoods------------------------------------------");
-            foreach (var validHoods in validateNeighborhoods)
+            Console.WriteLine("VERIFIED MANHATTAN NEIGHBORHOODS");
+            foreach (var verifiedNeighborhoods in verifyNeighborhoods)
             {
-                Console.WriteLine(validHoods);
+                Console.WriteLine(verifiedNeighborhoods);
             }
 
 
             ///<summary>
             /// Print distinct neighborhoods
             /// </summary>
-            var distinctNeighborhoods = validateNeighborhoods.Select(x => x).Distinct();
+            var specificNeighborhoods = verifyNeighborhoods.Select(x => x).Distinct();
 
-            Console.WriteLine("-------------------------------Distinct Manhattan Neighborhoods------------------------------------------");
-            foreach (var distinctHoods in distinctNeighborhoods)
+            Console.WriteLine("SPECIFIC MANHATTAN NEIGHBORHOODS");
+            foreach (var exactNieghborhoods in specificNeighborhoods)
             {
-                Console.WriteLine(distinctHoods);
+                Console.WriteLine(exactNieghborhoods);
             }
 
 
             ///<summary>
             /// All Manhattan Neighborhoods query's consolidated
             /// </summary>
-            var oneQueryThroughNeighborhoods = convertedJson.Features.Select(x => x)
+            var QueryOneThroughNeighborhoods = convertedJson.Features.Select(x => x)
                                                 .Select(x => x.Properties)
                                                 .Select(x => x.Neighborhood)
                                                 .Where(x => x.Length > 0)
                                                 .Distinct();
-            Console.WriteLine("-------------------------------One query Of All Manhattan Neighborhoods------------------------------------------");
-            foreach (var hoods in oneQueryThroughNeighborhoods)
+            Console.WriteLine("ONE QUERY OF ALL MANHATTAN NEIGHBORHOODS");
+            foreach (var hoods in QueryOneThroughNeighborhoods)
             {
                 Console.WriteLine(hoods);
             }
@@ -105,10 +105,10 @@ namespace Lab40108_LINGinManhattan
             ///<summary>
             /// Using lambda to print out all Manhattan neighborhoods
             /// </summary>
-            var neighborhoods = neighborhoodsQuery.Where(x => x.Length > 0);
+            var neighborhoods = queryNeighborhoods.Where(x => x.Length > 0);
 
-            Console.WriteLine("-------------------------------Print Out Of Manhattan Neighborhoods Using Lambda------------------------------------------");
-            foreach (var hood in neighborhoodsQuery)
+            Console.WriteLine("PRINT OUT OF MANHATTAN NEIGHBORHOODS USING LAMBDA");
+            foreach (var hood in queryNeighborhoods)
             {
                 Console.WriteLine(hood);
             }
