@@ -3,9 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.271
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab40108-LINGinManhattan", "Lab40108-LINGinManhattan\Lab40108-LINGinManhattan.csproj", "{17B7B186-2316-479F-AEA2-190CDB75629C}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab40108LINQInManhattan-XUnitTestProject1", "Lab40108LINQInManhattan-XUnitTestProject1\Lab40108LINQInManhattan-XUnitTestProject1.csproj", "{0A9BB912-9118-4326-B700-E7595EC9B88B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lab40108-LINGinManhattan", "Lab40108-LINGinManhattan\Lab40108-LINGinManhattan.csproj", "{17B7B186-2316-479F-AEA2-190CDB75629C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +15,6 @@ Global
 		{17B7B186-2316-479F-AEA2-190CDB75629C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{17B7B186-2316-479F-AEA2-190CDB75629C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{17B7B186-2316-479F-AEA2-190CDB75629C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0A9BB912-9118-4326-B700-E7595EC9B88B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0A9BB912-9118-4326-B700-E7595EC9B88B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0A9BB912-9118-4326-B700-E7595EC9B88B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0A9BB912-9118-4326-B700-E7595EC9B88B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

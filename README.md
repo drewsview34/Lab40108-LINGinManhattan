@@ -4,10 +4,9 @@ Lab 40108 LINQ In Manhattan
 
 Developer: Andrew Hinojosa
 
-Collaborator: ???
-Contributors: ???
+Contributors: Tre Cain
 
-Actual Time to complete: ???
+Actual Time To Complete: 8
 
 ## Summary
 This is an app that allows you to query location information in Manhattan.
@@ -23,7 +22,7 @@ This is an app that allows you to query location information in Manhattan.
 
 Purpose of the program to utilize a JSON file that contains a data set of location information for properties in Manhattan.
 
-To Run the program, user must click the start button (Green arrow) in Visual Studio.
+To run the program, user must click the start button (Green arrow) in Visual Studio.
 
 ## Visual Output 
 
