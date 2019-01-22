@@ -29,7 +29,7 @@ namespace Lab40108_LINGinManhattan
         /// </summary>
         static void ConvertJson()
         {
-            string location = "../../data.json";
+            string location = "../../../../data.json";
             string fileLocation = "";
 
             try
